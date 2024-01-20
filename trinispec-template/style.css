@@ -1,29 +1,27 @@
 :root {
-    --color-background: #008DD5;
-    --color-2: #E2E4E0;
-    /* --color-2: #E7E9EE; */
-    --color-accent: #fc605d;
-    /* --color-accent2: #008DD5; */
-    /* --color-accent2: #0064ff; */
+    --color-primary: #008DD5;
+    --color-secondary: #fc605d;
+    --color-neutral: #E2E4E0;;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Hack, monospace;
-    background: var(--color-background); 
-    color: var(--color-2);
+    background: var(--color-primary); 
+    color: var(--color-neutral);
 }
 
 aside, main, header, footer {
-    box-shadow: var(--color-2) 4px 4px; 
-    border: 1px solid var(--color-2);
+    box-shadow: var(--color-neutral) 4px 4px; 
+    border: 1px solid var(--color-neutral);
+    filter: blur(.4px);
     margin: 20px;
     padding: 10px;
 }
 
 a:visited {
-    color: var(--color-2);
+    color: var(--color-neutral);
 }
 
 div.main-container {
@@ -36,29 +34,41 @@ header, footer {
     flex-basis: 100%;
     flex-grow: 1;
     flex-shrink: 1;
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
 }
 
 header h1, footer p {
-    color: var(--color-2);
+    color: var(--color-neutral);
 }
 
 header h1 {
-    text-shadow: var(--color-background) 6px 4px 0px;
+    text-shadow: var(--color-primary) 6px 4px 0;
 }
 
 footer p {
-    text-shadow: var(--color-background) 4px 2px 0px;
+    text-shadow: var(--color-primary) 4px 2px 0;
 }
 
 nav {
-    display: flex;
     flex-direction: column;
     display: none;
 }
 
 .nav-toggle {
     display: none;
+}
+
+.button {
+    box-shadow: 4px 4px 0 0 var(--color-neutral); 
+    border: 1px solid var(--color-neutral);
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
 }
 
 /* Desktop view */
